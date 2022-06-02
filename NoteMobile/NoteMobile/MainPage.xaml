@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoteMobile.MainPage">
+
+    <StackLayout>
+        <CollectionView x:Name="ListNote"  SelectionMode="Single" SelectionChanged="ListNote_SelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Image Source="{Binding Url}"/>
+                        <Label Text="{Binding Name}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Background="MediumPurple"/>
+                        <Button Text="Удалить" Clicked="Button_Clicked" Background="purple"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Добавить" Background="purple" Clicked="Button_Clicked_1"/>
+            <Button Text="Изменить" Background="purple" Clicked="Button_Clicked_2"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

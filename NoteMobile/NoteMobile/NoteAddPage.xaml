@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoteMobile.NoteAddPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="ImageUser" Source="{Binding Url}" HeightRequest="100" WidthRequest="150"/>
+            <Button Text="Добавить" WidthRequest="70" Clicked="Button_Clicked" Background="purple"/>
+            <Entry x:Name="Name" Placeholder="Название" Text="{Binding Name}"/>
+            <Editor x:Name="Text" Placeholder="Заметка" Text="{Binding Description}"/>
+            <Button Text="Сохранить" WidthRequest="70" Clicked="Button_Clicked_1" Background="purple"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
